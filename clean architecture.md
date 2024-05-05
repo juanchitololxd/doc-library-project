@@ -3,30 +3,47 @@
 
 ## Arquitectura hexagonal
 
-
 ```mermaid
 graph TD
-    A[Application Layer] -->|Uses| B[Domain Layer]
-    B -->|Uses| C[Infrastructure Layer]
-    C --> D[Inbound Adapters]
-    C --> E[Outbound Adapters]
-    D --> F[UI/External Interfaces]
-    E --> G[Database/External Services]
-    B --> H[Business Logic]
+    app[Application Layer] -->|Uses| dom[Domain Layer]
+    dom -->|Uses| infra[Infrastructure Layer]
 
-    A --> I((Book Service))
-    D --> J((Book Controller))
-    E --> K((Book Repository))
-    E --> L((User Repository))
-    E --> M((Lend Repository))
-    H --> N{Model}
-    N --> O((Author))
-    N --> P((Book))
-    N --> Q((User))
-    N --> R((Category))
-    N --> S((DocType))
-    N --> T((Lend))
-    N --> U((Penalty))
+    subgraph dom[Domain Layer]
+        exceptions[Exceptions]
+        model[Model]
+    end
 
-    classDef hexagon fill:#fff,stroke:#333,stroke-width:2px;
-    class A,B,C,D,E,F,G,H hexagon
+    subgraph app[Application Layer]
+        bookService[Book Service]
+    end
+
+    subgraph infra[Infrastructure Layer]
+        inbound[Inbound]
+        repo[Repositories]
+    end
+
+    subgraph inbound[Inbound]
+        bookController[Book Controller]
+    end
+
+    subgraph repo[Repositories]
+        bookRepo[Book Repository]
+        lendRepo[Lend Repository]
+        userRepo[User Repository]
+    end
+
+    subgraph exceptions[Exceptions]
+        lendsExc[Lends Exception]
+        libExc[Library Exception]
+        usersExc[Users Exception]
+    end
+
+    subgraph model[Model]
+        author[Author]
+        book[Book]
+        category[Category]
+        docType[DocType]
+        lend[Lend]
+        penalty[Penalty]
+        user[User]
+    end
