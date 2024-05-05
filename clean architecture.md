@@ -3,6 +3,8 @@
 
 ## Arquitectura hexagonal
 
+
+```mermaid
 graph TD
     A[Application Layer] -->|Uses| B[Domain Layer]
     B -->|Uses| C[Infrastructure Layer]
