@@ -2,7 +2,7 @@
 
 # Caso de Negocio
 
-## Sistema de Gestión de Biblioteca
+## Prestamo de un libro en una Biblioteca
 
 # Descubrimiento de Dominios
 
