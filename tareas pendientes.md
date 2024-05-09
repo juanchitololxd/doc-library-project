@@ -1,3 +1,0 @@
-- subir esto a gh pages (jp)
-- MVP (jp)
-- Sonarcloud (jc)
