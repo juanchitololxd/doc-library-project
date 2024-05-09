@@ -7,9 +7,9 @@ Este desarrollo busca solucionar la necesidad de bibliotecas para poder gestiona
 # índice
 
 - [Diseño Guiado por el Dominio (DDD)](./ddd.md)
-- [Arquitectura Limpia](clean_architecture.md)
+- [Arquitectura Limpia](./cleanarchitecture.md)
 - [DevOps](./devops.md)
-- [MVP](MVP.md)
+- [MVP](./MVP.md)
 
 
 
