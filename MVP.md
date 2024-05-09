@@ -8,4 +8,6 @@ El MVP se centró en el dominio de préstamo de libro, identificando y desarroll
 
 ### Demostración
 
-![video](/assets/mvp.mp4)
+<video width="99%" controls>
+	<source src="https://juanchitololxd.github.io/doc-library-project/assets/mvp.mp4" type="video/mp4">
+</video>
