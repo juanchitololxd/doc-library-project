@@ -6,13 +6,58 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+<div>
+<pre class="mermaid">
+graph TD
+	infra2[Infrastructure Layer main] -->|Uses| app[Application Layer]
+    app[Application Layer] -->infra[Infrastructure Layer]
+	infra[Infrastructure Layer] -->dom 
+    
+    subgraph dom[Domain Layer]
+        exceptions[Exceptions]
+        model[Model]
+    end
 
-<video width="99%" controls>
-	<source src="https://juanchitololxd.github.io/doc-library-project/assets/mvp.mp4" type="video/mp4">
-</video>
+    subgraph app[Application Layer]
+        bookService[Book Service]
+    end
 
-</div>
+    subgraph infra[Infrastructure Layer]
+        repo[Repositories]
+    end
 	
+	subgraph infra2[Infrastructure Layer main]
+        inbound[Inbound]
+    end
+
+    subgraph inbound[Inbound]
+        bookController[Book Controller]
+    end
+
+    subgraph repo[Repositories]
+        bookRepo[Book Repository]
+        lendRepo[Lend Repository]
+        userRepo[User Repository]
+    end
+
+    subgraph exceptions[Exceptions]
+        lendsExc[Lends Exception]
+        libExc[Library Exception]
+        usersExc[Users Exception]
+    end
+
+    subgraph model[Model]
+        author[Author]
+        book[Book]
+        category[Category]
+        docType[DocType]
+        lend[Lend]
+        penalty[Penalty]
+        user[User]
+    end
+
+</pre>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js "></script>
+</div>
 </body>
 </html>

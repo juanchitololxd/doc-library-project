@@ -1,4 +1,4 @@
-# Clean Architectures
+# Clean Architecture
 
 
 ## Arquitectura hexagonal
@@ -8,8 +8,9 @@
 <pre class="mermaid">
 
 graph TD
-    app[Application Layer] -->|Uses| dom[Domain Layer]
-    dom -->|Uses| infra[Infrastructure Layer]
+	infra2[Infrastructure Layer main] -->|Uses| app[Application Layer]
+    app[Application Layer] -->infra[Infrastructure Layer]
+	infra[Infrastructure Layer] -->dom 
     
     subgraph dom[Domain Layer]
         exceptions[Exceptions]
@@ -21,8 +22,11 @@ graph TD
     end
 
     subgraph infra[Infrastructure Layer]
-        inbound[Inbound]
         repo[Repositories]
+    end
+	
+	subgraph infra2[Infrastructure Layer main]
+        inbound[Inbound]
     end
 
     subgraph inbound[Inbound]
@@ -50,8 +54,6 @@ graph TD
         penalty[Penalty]
         user[User]
     end
-
-    bookController -->|Uses| bookService
 </pre>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js "></script>

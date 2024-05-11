@@ -1,10 +1,8 @@
 # DevOps
 
-## Continous Integration
+## Análisis estático de codigo
 
 Integración con sonarcloud cuando se realiza un merge con la rama `main`
-
-
 
 
 
@@ -22,6 +20,3 @@ Uso de Github Actions para publicar esta documentación.
 Documentación de los endpoints se actualiza en tiempo real.
 
 ![apidog](/assets/apidog.png)
-
-#### Análisis estático de codigo
-Jc
