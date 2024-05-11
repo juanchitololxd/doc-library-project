@@ -2,7 +2,7 @@
 
 ## Continous Integration
 
-Integración con sonarcloud cuando se realiza un merge con la rama `main`}
+Integración con sonarcloud cuando se realiza un merge con la rama `main`
 
 
 
