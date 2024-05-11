@@ -9,7 +9,7 @@
 graph TD
     app[Application Layer] -->|Uses| dom[Domain Layer]
     dom -->|Uses| infra[Infrastructure Layer]
-
+    
     subgraph dom[Domain Layer]
         exceptions[Exceptions]
         model[Model]
@@ -49,6 +49,8 @@ graph TD
         penalty[Penalty]
         user[User]
     end
+
+    bookController -->|Uses| bookService
 </pre>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js "></script>
