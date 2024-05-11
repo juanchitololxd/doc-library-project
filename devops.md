@@ -2,9 +2,11 @@
 
 ## Continous Integration
 
-Integración con sonarcloud cuando se realiza un merge con la rama `main`
+Integración con sonarcloud cuando se realiza un merge con la rama `main`}
 
-![sonarcloud](https://sonarcloud.io/summary/overall?id=julianCS21_libraryproject)
+[SonarCloud](https://sonarcloud.io/summary/overall?id=julianCS21_libraryproject)
+
+
 
 ![evidencia sonar](/assets/evidencia_sonar.jpg)
 ## Otras practicas
