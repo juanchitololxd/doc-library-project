@@ -4,11 +4,14 @@
 
 Integración con sonarcloud cuando se realiza un merge con la rama `main`}
 
-[SonarCloud](https://sonarcloud.io/summary/overall?id=julianCS21_libraryproject)
+
 
 
 
 ![evidencia sonar](/assets/evidencia_sonar.jpg)
+
+
+[SonarCloud](https://sonarcloud.io/summary/overall?id=julianCS21_libraryproject)
 ## Otras practicas
 
 Uso de Github Actions para publicar esta documentación.
