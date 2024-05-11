@@ -6,6 +6,7 @@
 
 <div>
 <pre class="mermaid">
+
 graph TD
     app[Application Layer] -->|Uses| dom[Domain Layer]
     dom -->|Uses| infra[Infrastructure Layer]
